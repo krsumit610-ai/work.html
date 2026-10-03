@@ -1,0 +1,330 @@
+body {
+    background: #0b132b;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+}
+.container1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    height: 100vh;
+    padding: 50px;
+    background-image: url(https://4kwallpapers.com/images/wallpapers/royal-challengers-bangalore-indian-premier-league-ipl-ipl-5120x2880-4937.png);
+    color: white;
+    animation: fadeIn 3s ease-in;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 3; }
+}
+
+.left {
+    max-width: 50%;
+}
+.left h3 {
+    font-weight: normal;   
+}
+.left h1 {
+    font-size: 50px;
+}
+.left h2 {
+    font-size: 60px;
+    font-weight: bold;
+}
+.left p {
+    margin: 20px 0;
+    color: white;
+}
+.right img {
+    width: 400px;
+}
+.btn{
+    color: black;
+}
+
+.container02 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    background-image: url(https://4kwallpapers.com/images/wallpapers/royal-challengers-bangalore-indian-premier-league-ipl-ipl-5120x2880-4937.png);
+    margin-bottom: 20px;
+}
+
+
+.left02 {
+    width: 50%;
+    padding: 40px;
+}
+
+.left02 h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.left02 h3 {
+    margin-bottom: 20px;
+}
+
+.left02 p {
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid white;
+    padding: 10px 15px;
+}
+.right02 {
+    width: 50%;
+    text-align: center;
+}
+
+.right02 img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    height: 400px;
+}
+.left02, .right02 {
+        width: 100%;
+        text-align: center;
+    }
+.main {
+       
+        width: 1320px;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .s1 {
+        background-image: url(https://www.shutterstock.com/shutterstock/videos/3884241109/thumb/1.jpg?ip=x480);
+        height: 300px;
+        width: 300px;
+        border: 5px solid black ;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+    .s1:hover {
+        transform: translateY(-10px);
+    }
+    .s1 img{
+        width: 150px;
+    }
+    .line {
+        width: 50px;
+        height: 3px;
+        background: rgb(250, 212, 0);
+        margin: 5px auto 20px;
+    }
+    .card p {
+        font-size: 14px;
+        color: white;
+    }
+    .s2 {
+        background-image: url(https://www.shutterstock.com/shutterstock/videos/3884241109/thumb/1.jpg?ip=x480);
+        height: 300px;
+        width: 300px;
+        border: 5px solid black ;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+    .s2:hover {
+        transform: translateY(-10px);
+    }
+    .s2 img{
+         width: 130px;
+        margin-bottom: 15px;
+    }
+    .s3 {
+        background-image: url(https://www.shutterstock.com/shutterstock/videos/3884241109/thumb/1.jpg?ip=x480);
+        height: 300px;
+        width: 300px;
+       border: 5px solid black ;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+    .s3:hover {
+        transform: translateY(-10px);
+    }
+    .s3 img{
+         width: 150px;
+    }
+  .section1 {
+        text-align: center;
+        margin-bottom: 20px;
+        background-image:url(https://4kwallpapers.com/images/wallpapers/royal-challengers-bangalore-indian-premier-league-ipl-ipl-5120x2880-4937.png) ;
+        margin-bottom: 20px;
+    }
+    #gg {
+        font-size: 36px;
+        margin-bottom: 5px;
+        text-align: center;
+        padding-top: 25px;
+    }
+ #gl {
+        color: white;
+        max-width: 600px;
+        margin: auto;
+    }
+    .section2 {
+        text-align: center;
+        padding: 60px 10px;
+        background-image:url(https://4kwallpapers.com/images/wallpapers/royal-challengers-bangalore-indian-premier-league-ipl-ipl-5120x2880-4937.png) ;
+        margin-bottom: 20px;
+    }
+    .pic{
+        width: 1320px;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+   
+    .pic1 {
+    
+        height: 300px;
+        width: 300px;
+        border: 5px solid  black;
+        border-radius: 10px;
+        
+    }
+    .pic2 {
+        
+        height: 300px;
+        width: 300px;
+        border: 5px solid black;
+        border-radius: 10px;
+    }
+    .pic3 {
+       
+        height: 300px;
+        width: 300px;
+        border: 5px solid black;
+        border-radius: 10px;
+    }
+    .section3{
+        text-align: center;
+        padding: 60px 10px;
+        background-image:url(https://4kwallpapers.com/images/wallpapers/royal-challengers-bangalore-indian-premier-league-ipl-ipl-5120x2880-4937.png) ;
+        margin-bottom: 20px;
+    }
+    .container3{
+        width: 1310px;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-image: url(https://4kwallpapers.com/images/wallpapers/royal-challengers-bangalore-indian-premier-league-ipl-ipl-5120x2880-4937.png);
+    }
+    .d1{
+        height: 440px;
+        width: 400px;
+        background-image: url(https://mrwallpaper.com/images/hd/red-rcb-team-logo-scratched-a30b6jmkc8euwgpt.jpg);
+        border: 10px double black;
+    }
+    .d2{
+        height: 440px;
+        width: 400px;
+        background-image: url(https://mrwallpaper.com/images/hd/red-rcb-team-logo-scratched-a30b6jmkc8euwgpt.jpg);
+        border: 10px double black;
+    }
+    .dec{
+         font-size: 36px;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    .dec1{
+        color: yellow;
+        max-width: 600px;
+        margin: auto;
+    
+    }
+    .hero{
+        font-size: 30px;
+        color: white;
+        font-family: Arial, sans-serif;
+        -webkit-text-stroke: 1px black;
+    }
+    label{
+        font-size: 18px;
+        color: black;
+    }
+    .k1{
+        width: 230px;
+        font-size: 15px;
+        border: 3px solid black;
+        border-radius: 4px;
+        background-color: rgb(226, 70, 70);
+    }
+    .k2{
+        height: 180px;
+        width: 150px;
+        font-size: 15px;
+        border: 3px solid black;
+        border-radius: 4px;
+        background-color: rgb(226, 70, 70);
+        background-image: url(https://www.shutterstock.com/image-vector/whats-your-problem-sign-on-260nw-2425378345.jpg); 
+        background-position: center;
+    }
+    .btn2{
+        color: black;
+        background-color: rgb(247, 79, 79);
+        border: 3px solid black;
+        border-radius: 5px;
+        width: 80px;
+        height: 25px;
+        font-weight: bold;
+    }
+    .section4{
+        width: 1320px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border: 5px solid black;
+    }
+    .sumi{
+        width: 400px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+         background-image: url(https://mrwallpaper.com/images/hd/red-rcb-team-logo-scratched-a30b6jmkc8euwgpt.jpg);
+    }
+    .img1{
+        height: 45px;
+        width: 100px;
+        
+       
+    }
+    .img2{
+        height: 45px;
+        width: 100px;
+         
+    }
+    .img3{
+        height: 45px;
+        width: 100px;  
+    }
+    .sumi1{
+        width: 920px;
+        height: 50px;
+        background-image: url(https://mrwallpaper.com/images/hd/red-rcb-team-logo-scratched-a30b6jmkc8euwgpt.jpg);
+    }
+   
+    .f1{
+        text-align: right;
+        padding-right: 10px;
+        color: black;
+    }

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mathematical Pattern</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #000;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        canvas {
+            width: 95vmin;
+            height: 95vmin;
+        }
+    </style>
+</head>
+
+<body>
+
+<canvas id="canvas"></canvas>
+
+<script>
+
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+let size;
+let center;
+let radius;
+let time = 0;
+
+
+// Resize Canvas
+
+
+function resize() {
+
+    size = Math.min(window.innerWidth, window.innerHeight) * 0.95;
+
+    canvas.width = size;
+    canvas.height = size;
+
+    center = size / 2;
+    radius = size * 0.45;
+}
+
+resize();
+
+window.addEventListener("resize", resize);
+
+
+
+// Draw Pattern
+
+
+function draw() {
+
+    // Clear canvas
+    ctx.clearRect(0, 0, size, size);
+
+    ctx.save();
+
+    // Move origin to center
+    ctx.translate(center, center);
+
+
+    // Black Background
+  
+
+    ctx.fillStyle = "#000";
+
+    ctx.fillRect(
+        -center,
+        -center,
+        size,
+        size
+    );
+
+
+
+    // Outer Circle
+    
+
+    ctx.beginPath();
+
+    ctx.arc(
+        0,
+        0,
+        radius,
+        0,
+        Math.PI * 2
+    );
+
+    ctx.strokeStyle = "rgba(220, 220, 255, 0.8)";
+    ctx.lineWidth = 1.5;
+
+    ctx.stroke();
+
+
+  
+    // Number of Lines
+
+
+    const lines = 160;
+
+
+  
+    // First Set of Lines
+ 
+
+    for (let i = 0; i < lines; i++) {
+
+        // First angle
+        const a1 =
+            (i / lines) * Math.PI * 2;
+
+
+        // Second angle
+        let a2 =
+            ((i * 3 + 20) / lines) *
+            Math.PI * 2;
+
+
+        // Animation
+        a2 += Math.sin(time) * 0.02;
+
+
+        // Point 1
+        const x1 =
+            Math.cos(a1) * radius;
+
+        const y1 =
+            Math.sin(a1) * radius;
+
+
+        // Point 2
+        const x2 =
+            Math.cos(a2) * radius;
+
+        const y2 =
+            Math.sin(a2) * radius;
+
+
+        
+        // Gradient
+    
+
+        const gradient =
+            ctx.createLinearGradient(
+                x1,
+                y1,
+                x2,
+                y2
+            );
+
+
+        gradient.addColorStop(
+            0,
+            "rgba(255, 180, 190, 0.8)"
+        );
+
+        gradient.addColorStop(
+            0.5,
+            "rgba(190, 170, 255, 0.7)"
+        );
+
+        gradient.addColorStop(
+            1,
+            "rgba(255, 220, 180, 0.8)"
+        );
+
+
+        // Draw line
+        ctx.beginPath();
+
+        ctx.moveTo(x1, y1);
+
+        ctx.lineTo(x2, y2);
+
+        ctx.strokeStyle = gradient;
+
+        ctx.lineWidth = 0.8;
+
+        ctx.stroke();
+    }
+
+
+   
+    // Second Set of Lines
+   
+
+    for (let i = 0; i < lines; i++) {
+
+        const a1 =
+            (i / lines) * Math.PI * 2;
+
+
+        const a2 =
+            ((i * 3 + 70) / lines) *
+            Math.PI * 2;
+
+
+        // Point 1
+        const x1 =
+            Math.cos(a1) * radius;
+
+        const y1 =
+            Math.sin(a1) * radius;
+
+
+        // Point 2
+        const x2 =
+            Math.cos(a2) * radius;
+
+        const y2 =
+            Math.sin(a2) * radius;
+
+
+        // Draw line
+        ctx.beginPath();
+
+        ctx.moveTo(x1, y1);
+
+        ctx.lineTo(x2, y2);
+
+        ctx.strokeStyle =
+            "rgba(150, 180, 255, 0.35)";
+
+        ctx.lineWidth = 0.6;
+
+        ctx.stroke();
+    }
+
+
+    
+    // Center Glow
+    
+
+    const glow =
+        ctx.createRadialGradient(
+            0,
+            0,
+            0,
+            0,
+            0,
+            radius * 0.25
+        );
+
+
+    glow.addColorStop(
+        0,
+        "rgba(255, 180, 180, 0.20)"
+    );
+
+    glow.addColorStop(
+        1,
+        "rgba(0, 0, 0, 0)"
+    );
+
+
+    // Apply glow
+    ctx.fillStyle = glow;
+
+    ctx.beginPath();
+
+    ctx.arc(
+        0,
+        0,
+        radius * 0.3,
+        0,
+        Math.PI * 2
+    );
+
+    ctx.fill();
+
+
+    // Restore canvas
+    ctx.restore();
+
+
+   
+    // Animation
+   
+
+    time += 0.01;
+
+    requestAnimationFrame(draw);
+}
+
+
+// Start animation
+draw();
+
+</script>
+
+</body>
+</html>

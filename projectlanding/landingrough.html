@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swiggy Style UI</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#ff5b00;
+      overflow-x:hidden;
+    }
+
+    /* HERO SECTION */
+    .hero{
+      width:100%;
+      min-height:100vh;
+      position:relative;
+      padding:30px 80px;
+    }
+
+    /* TOP IMAGES */
+    .left-img{
+      position:absolute;
+      left:0;
+      top:0;
+      width:240px;
+    }
+
+    .right-img{
+      position:absolute;
+      right:0;
+      top:0;
+      width:260px;
+    }
+
+    /* TITLE */
+    .title{
+      text-align:center;
+      color:white;
+      font-size:58px;
+      font-weight:700;
+      line-height:1.2;
+      margin-top:10px;
+    }
+
+    /* SEARCH BAR */
+    .search-box{
+      display:flex;
+      justify-content:center;
+      gap:18px;
+      margin-top:25px;
+      flex-wrap:wrap;
+    }
+
+    .location-box,
+    .search-input{
+      background:white;
+      border-radius:18px;
+      padding:18px 22px;
+      display:flex;
+      align-items:center;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .location-box{
+      width:310px;
+      justify-content:space-between;
+    }
+
+    .search-input{
+      width:480px;
+      justify-content:space-between;
+    }
+
+    .location-box input,
+    .search-input input{
+      border:none;
+      outline:none;
+      width:100%;
+      font-size:16px;
+      margin-left:10px;
+    }
+
+    /* CARDS */
+    .cards{
+      display:flex;
+      justify-content:center;
+      gap:35px;
+      margin-top:60px;
+      flex-wrap:wrap;
+    }
+
+    .card{
+      width:310px;
+      height:340px;
+      background:#f5f5f5;
+      border-radius:28px;
+      padding:25px;
+      position:relative;
+      overflow:hidden;
+      box-shadow:0 8px 20px rgba(0,0,0,0.2);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card h2{
+      font-size:24px;
+      color:#333;
+      font-weight:700;
+    }
+
+    .card p{
+      color:#777;
+      margin-top:5px;
+      font-size:16px;
+    }
+
+    .offer{
+      display:inline-block;
+      margin-top:15px;
+      background:#ffe8dc;
+      color:#ff5b00;
+      padding:6px 12px;
+      border-radius:12px;
+      font-size:14px;
+      font-weight:600;
+    }
+
+    .arrow{
+      position:absolute;
+      left:25px;
+      bottom:25px;
+      width:46px;
+      height:46px;
+      background:#ff5b00;
+      color:white;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:26px;
+      cursor:pointer;
+    }
+
+    .food-img{
+      position:absolute;
+      right:0;
+      bottom:0;
+      width:150px;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:900px){
+
+      .hero{
+        padding:20px;
+      }
+
+      .title{
+        font-size:40px;
+      }
+
+      .search-input{
+        width:100%;
+      }
+
+      .location-box{
+        width:100%;
+      }
+
+      .left-img,
+      .right-img{
+        display:none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+
+    <!-- SIDE IMAGES -->
+    <img src="left-food.png" class="left-img">
+    <img src="right-food.png" class="right-img">
+
+    <!-- TITLE -->
+    <h1 class="title">
+      best restaurants. <br>
+      Swiggy it!
+    </h1>
+
+    <!-- SEARCH -->
+    <div class="search-box">
+
+      <div class="location-box">
+        <span>📍</span>
+        <input type="text" placeholder="Enter your delivery location">
+        <span>⌄</span>
+      </div>
+
+      <div class="search-input">
+        <input type="text" placeholder="Search for restaurant, item or more">
+        <span>🔍</span>
+      </div>
+
+    </div>
+
+    <!-- CARDS -->
+    <div class="cards">
+
+      <!-- CARD 1 -->
+      <div class="card">
+        <h2>FOOD DELIVERY</h2>
+        <p>FROM RESTAURANTS</p>
+
+        <div class="offer">UPTO 60% OFF</div>
+
+        <div class="arrow">→</div>
+
+        <img src="food1.png" class="food-img">
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="card">
+        <h2>INSTAMART</h2>
+        <p>INSTANT GROCERY</p>
+
+        <div class="offer">UPTO 60% OFF</div>
+
+        <div class="arrow">→</div>
+
+        <img src="food2.png" class="food-img">
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="card">
+        <h2>DINEOUT</h2>
+        <p>EAT OUT & SAVE MORE</p>
+
+        <div class="offer">UPTO 50% OFF</div>
+
+        <div class="arrow">→</div>
+
+        <img src="food3.png" class="food-img">
+      </div>
+
+    </div>
+
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameZone - Gaming Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">GAME<span>ZONE</span></div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#games">Games</a></li>
+                <li><a href="#tournaments">Tournaments</a></li>
+                <li><a href="#leaderboard">Leaderboard</a></li>
+            </ul>
+
+            <button class="login-btn">Login</button>
+            <div class="menu-btn" onclick="toggleMenu()">☰</div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="small-title">WELCOME TO GAMEZONE</p>
+
+            <h1>LEVEL UP<br><span>YOUR GAME</span></h1>
+
+            <p>
+                Enter the ultimate gaming universe. 
+                Play, compete and become the champion.
+            </p>
+
+            <div class="hero-buttons">
+                <button class="primary-btn">PLAY NOW</button>
+                <button class="secondary-btn">EXPLORE GAMES</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games -->
+    <section class="games-section" id="games">
+        <div class="section-heading">
+            <p>POPULAR</p>
+            <h2>FEATURED GAMES</h2>
+        </div>
+
+        <div class="game-grid">
+
+            <div class="game-card">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80">
+                <div class="game-info">
+                    <span>FPS</span>
+                    <h3>Cyber Battle</h3>
+                    <p>★★★★★</p>
+                    <button>PLAY GAME</button>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80">
+                <div class="game-info">
+                    <span>ACTION</span>
+                    <h3>Shadow Warrior</h3>
+                    <p>★★★★★</p>
+                    <button>PLAY GAME</button>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80">
+                <div class="game-info">
+                    <span>ARCADE</span>
+                    <h3>Pixel Force</h3>
+                    <p>★★★★☆</p>
+                    <button>PLAY GAME</button>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=800&q=80">
+                <div class="game-info">
+                    <span>RACING</span>
+                    <h3>Street Racer</h3>
+                    <p>★★★★★</p>
+                    <button>PLAY GAME</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Tournament -->
+    <section class="tournament" id="tournaments">
+        <div>
+            <p class="small-title">UPCOMING EVENT</p>
+            <h2>WORLD GAMING<br><span>CHAMPIONSHIP</span></h2>
+            <p class="description">
+                Compete against the best players and win amazing rewards.
+            </p>
+            <button class="primary-btn">JOIN TOURNAMENT</button>
+        </div>
+
+        <div class="prize">
+            <p>PRIZE POOL</p>
+            <h3>$50,000</h3>
+        </div>
+    </section>
+
+    <!-- Leaderboard -->
+    <section class="leaderboard" id="leaderboard">
+        <div class="section-heading">
+            <p>TOP PLAYERS</p>
+            <h2>LEADERBOARD</h2>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>RANK</th>
+                    <th>PLAYER</th>
+                    <th>LEVEL</th>
+                    <th>SCORE</th>
+                </tr>
+
+                <tr>
+                    <td>#01</td>
+                    <td>ShadowX</td>
+                    <td>99</td>
+                    <td>98,450</td>
+                </tr>
+
+                <tr>
+                    <td>#02</td>
+                    <td>NightWolf</td>
+                    <td>96</td>
+                    <td>94,820</td>
+                </tr>
+
+                <tr>
+                    <td>#03</td>
+                    <td>Venom</td>
+                    <td>94</td>
+                    <td>91,250</td>
+                </tr>
+
+                <tr>
+                    <td>#04</td>
+                    <td>DarkSoul</td>
+                    <td>91</td>
+                    <td>88,700</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="logo">GAME<span>ZONE</span></div>
+        <p>© 2026 GameZone. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
